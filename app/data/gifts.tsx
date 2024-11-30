@@ -10,27 +10,27 @@ import { Gift as GiftType } from "../types";
 export const gifts: GiftType[] = [
   {
     id: 1,
-    content: "Starbucks Date + Mall Shopping",
+    content: "Вечерен масаж на краченца - дълъг с крем",
     icon: <GiftIcon className="w-12 h-12 text-white" />,
   },
   {
     id: 2,
-    content: "Масаж на краченца",
+    content: "Украсяване на елха заедно с много любов",
     icon: <StarIcon className="w-12 h-12 text-white" />,
   },
   {
     id: 3,
-    content: "Украсяване на елха заедно с любов",
+    content: "Подаръкът ти е някъде около теб.",
     icon: <TreeIcon className="w-12 h-12 text-white" />,
   },
   {
     id: 4,
-    content: "Дълго милване преди заспиване",
+    content: "Starbucks Date + Mall Shopping",
     icon: <GiftIcon className="w-12 h-12 text-white" />,
   },
   {
     id: 5,
-    content: "Turkish Dizi по избор",
+    content: "Дълго милване преди заспиване",
     icon: <StarIcon className="w-12 h-12 text-white" />,
   },
   {
@@ -40,12 +40,12 @@ export const gifts: GiftType[] = [
   },
   {
     id: 7,
-    content: "Масаж на вратлето и милване",
+    content: "Дълго TikTok гледане заедно вечерта",
     icon: <GiftIcon className="w-12 h-12 text-white" />,
   },
   {
     id: 8,
-    content: "Дълго TikTok гледане заедно вечерта",
+    content: "Масаж на вратлето и милване",
     icon: <StarIcon className="w-12 h-12 text-white" />,
   },
   {
@@ -86,12 +86,12 @@ export const gifts: GiftType[] = [
   },
   {
     id: 16,
-    content: "Turkish Dizi по избор 2",
+    content: "Turkish Dizi по избор",
     icon: <GiftIcon className="w-12 h-12 text-white" />,
   },
   {
     id: 17,
-    content: "Коледни филми + гушкане",
+    content: "Коледни филми, гушане и зненадка",
     icon: <StarIcon className="w-12 h-12 text-white" />,
   },
   {
@@ -106,7 +106,7 @@ export const gifts: GiftType[] = [
   },
   {
     id: 20,
-    content: "Подаръкът ти е някъде около теб.",
+    content: "Turkish Dizi по избор 2",
     icon: <StarIcon className="w-12 h-12 text-white" />,
   },
   {
