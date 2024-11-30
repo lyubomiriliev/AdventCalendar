@@ -37,6 +37,11 @@ export default function Home() {
   const handleCardClick = (gift: Gift) => {
     const today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
 
+    if (openCards.has(gift.id)) {
+      setSelectedGift(gift);
+      return;
+    }
+
     // Check if the user has already opened a card today
     if (lastOpenedDate === today) {
       alert("You can only open one card per day. Come back tomorrow!");
