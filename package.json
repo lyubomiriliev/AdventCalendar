@@ -46,6 +46,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
+    "drawer": "^0.0.2",
     "embla-carousel-react": "^8.3.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.1",
@@ -59,12 +60,15 @@
     "react-day-picker": "^9.4.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.53.0",
+    "react-resizable-panels": "^2.1.7",
     "react-snowfall": "^1.2.1",
     "recharts": "^2.13.3",
+    "sonner": "^1.7.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.2.2",
+    "vaul": "^1.1.1",
     "zod": "^3.23.8"
   }
 }
