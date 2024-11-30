@@ -11,25 +11,35 @@ import Footer from "./components/Footer";
 const Snowfall = dynamic(() => import("react-snowfall"), { ssr: false });
 
 export default function Home() {
-  // Initialize `openCards` from localStorage or use an empty Set
-  const [openCards, setOpenCards] = useState<Set<number>>(() => {
-    const storedOpenCards = localStorage.getItem("openCards");
-    return storedOpenCards ? new Set(JSON.parse(storedOpenCards)) : new Set();
-  });
-
+  const [openCards, setOpenCards] = useState<Set<number>>(new Set());
   const [selectedGift, setSelectedGift] = useState<Gift | null>(null);
-  const [lastOpenedDate, setLastOpenedDate] = useState<string | null>(() => {
-    return localStorage.getItem("lastOpenedDate");
-  });
+  const [lastOpenedDate, setLastOpenedDate] = useState<string | null>(null);
 
-  // Save `openCards` to localStorage whenever it changes
+  // Load `openCards` and `lastOpenedDate` from `localStorage` on client side
   useEffect(() => {
-    localStorage.setItem("openCards", JSON.stringify(Array.from(openCards)));
+    if (typeof window !== "undefined") {
+      const storedOpenCards = localStorage.getItem("openCards");
+      if (storedOpenCards) {
+        setOpenCards(new Set(JSON.parse(storedOpenCards)));
+      }
+
+      const storedLastOpenedDate = localStorage.getItem("lastOpenedDate");
+      if (storedLastOpenedDate) {
+        setLastOpenedDate(storedLastOpenedDate);
+      }
+    }
+  }, []);
+
+  // Save `openCards` to `localStorage` whenever it changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("openCards", JSON.stringify(Array.from(openCards)));
+    }
   }, [openCards]);
 
-  // Save `lastOpenedDate` to localStorage whenever it changes
+  // Save `lastOpenedDate` to `localStorage` whenever it changes
   useEffect(() => {
-    if (lastOpenedDate) {
+    if (typeof window !== "undefined" && lastOpenedDate) {
       localStorage.setItem("lastOpenedDate", lastOpenedDate);
     }
   }, [lastOpenedDate]);
