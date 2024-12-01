@@ -45,15 +45,17 @@ export default function Home() {
   }, [lastOpenedDate]);
 
   const handleCardClick = (gift: Gift) => {
-    const today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
+    const today = new Date().getDate(); // Get today's day (e.g., 1, 2, 3, etc.)
 
-    if (openCards.has(gift.id)) {
-      setSelectedGift(gift);
+    // Check if the gift is available to open based on the current day
+    if (gift.id > today) {
+      alert(`You can only open this gift on or after December ${gift.id}.`);
       return;
     }
 
     // Check if the user has already opened a card today
-    if (lastOpenedDate === today) {
+    const todayDateString = new Date().toISOString().split("T")[0];
+    if (lastOpenedDate === todayDateString && !openCards.has(gift.id)) {
       alert("You can only open one card per day. Come back tomorrow!");
       return;
     }
@@ -63,7 +65,7 @@ export default function Home() {
     setOpenCards((prev) => new Set([...prev, gift.id])); // Add the gift.id to the Set
 
     // Update the last opened date
-    setLastOpenedDate(today);
+    setLastOpenedDate(todayDateString);
   };
 
   return (
@@ -78,7 +80,7 @@ export default function Home() {
           <h1 className="text-4xl lg:text-5xl font-bold uppercase text-red-500 mb-6 font-serif tracking-wide">
             Digital Advent Calendar
           </h1>
-          <p className="text-xl lg:text-2xl text-green-300 font-light">
+          <p className="text-xl lg:text-2xl text-green-300 font-berkshire font-light">
             Specially created with all my love for my special kitty. Seni cok
             seviyorum, askim benim 🎄✨
           </p>
