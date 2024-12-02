@@ -20,7 +20,7 @@ export const gifts: GiftType[] = [
   },
   {
     id: 3,
-    content: "Подаръкът ти е на любимото ти място. Потърси го.",
+    content: "Подаръкът ти е скрит на любимото ти място. Потърси го.",
     icon: <GiftIcon className="w-12 h-12 text-white" />,
   },
   {
