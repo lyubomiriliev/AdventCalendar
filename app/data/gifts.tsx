@@ -25,7 +25,7 @@ export const gifts: GiftType[] = [
   },
   {
     id: 4,
-    content: "Starbucks Date + Mall Shopping",
+    content: "Turkish Dizi по избор",
     icon: <StarIcon className="w-12 h-12 text-white" />,
   },
   {
@@ -86,12 +86,12 @@ export const gifts: GiftType[] = [
   },
   {
     id: 16,
-    content: "Turkish Dizi по избор",
+    content: "Starbucks Date + Mall Shopping",
     icon: <GiftIcon className="w-12 h-12 text-white" />,
   },
   {
     id: 17,
-    content: "Коледни филми, гушане и зненадка",
+    content: "Коледни филми и гушане",
     icon: <TreeIcon className="w-12 h-12 text-white" />,
   },
   {
