@@ -61,7 +61,7 @@ export const gifts: GiftType[] = [
   },
   {
     id: 11,
-    content: "Зненадка от chef Iliev",
+    content: "Тирамису by chef Iliev",
     icon: <GiftIcon className="w-12 h-12 text-white" />,
   },
   {
@@ -76,7 +76,7 @@ export const gifts: GiftType[] = [
   },
   {
     id: 14,
-    content: "Тирамису by chef Iliev",
+    content: "Зненадка от chef Iliev",
     icon: <StarIcon className="w-12 h-12 text-white" />,
   },
   {
