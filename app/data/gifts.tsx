@@ -111,7 +111,7 @@ export const gifts: GiftType[] = [
   },
   {
     id: 21,
-    content: "Целодневно мързелуване заедно в леглото",
+    content: "Брънч и разходка + Целодневно мързелуване заедно в леглото",
     icon: <GiftIcon className="w-12 h-12 text-white" />,
   },
   {
