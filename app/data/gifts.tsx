@@ -111,12 +111,12 @@ export const gifts: GiftType[] = [
   },
   {
     id: 21,
-    content: "Брънч и разходка + Целодневно мързелуване заедно в леглото",
+    content: "Вечеря на ресторант Nero + Нетфликс филмче вкъщи",
     icon: <GiftIcon className="w-12 h-12 text-white" />,
   },
   {
     id: 22,
-    content: "Предколедно Кино + Вечеря на ресторант зненадка",
+    content: "Брънч и разходка + Целодневно мързелуване заедно в леглото",
     icon: <TreeIcon className="w-12 h-12 text-white" />,
   },
   {
@@ -127,7 +127,8 @@ export const gifts: GiftType[] = [
   },
   {
     id: 24,
-    content: "Весела Коледа, Коти <3 Подаръкът ти е под елхата obviously...",
+    content:
+      "Весела Коледа, Любов моя <3 Подаръкът ти е под елхата obviously...",
     icon: <TreeIcon className="w-12 h-12 text-white" />,
   },
 ];
